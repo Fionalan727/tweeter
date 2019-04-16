@@ -37,3 +37,7 @@ input {
 .counter{
     float: right;
 }
+
+.overLimit{
+    color:red;
+}
