@@ -3,16 +3,30 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+
+function escape(str) {
+  var div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+
 $(document).ready(function() {
 
   function renderTweets(tweets) {
     // loops through tweets
+    $('.tweet-container').empty();
+    tweets.reverse();
     tweets.forEach(function(element){
       
       $('.tweet-container').append(createTweetElement(element));
 
     })
   };
+
+  $( ".compose" ).click(function() {
+    $( ".new-tweet" ).slideToggle( "slow" );
+    $("textarea").focus();
+  });
 
   function createTweetElement (tweet) {
  
@@ -37,12 +51,19 @@ $(document).ready(function() {
 
   function eventHandler(event){
     event.preventDefault();
+    if($('textarea').val() === ""){
+      return alert("You didn't type anything!!")
+    }
+    if ($('textarea').val().length > 140) {
+      return alert("You have typed over character limit!!")
+    }
     $.ajax({
       type:'post',
       url:'/tweets',
       data:$('section.new-tweet form textarea').serialize(),
       complete: function(){
-        console.log("success")
+        $('textarea').val(null);
+        loadTweets();
       }
     });
   }

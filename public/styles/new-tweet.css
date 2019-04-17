@@ -5,6 +5,7 @@
     margin: 2em auto;
     background-color:#8a9a5b;
     padding: 2%;
+    display: none;
 }
 
 .new-tweet h2{

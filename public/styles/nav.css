@@ -22,4 +22,6 @@
     line-height: 70px;
 }
 
-
+#nav-bar .compose{
+    float: right;
+}
