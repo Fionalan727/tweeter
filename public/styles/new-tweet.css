@@ -19,6 +19,14 @@ tweet-input{
 }
 
 
+
+.error1{
+    display: none;
+
+}
+.error2{
+    display: none;
+}
 .tweet{
     border: 1px solid lightgrey;
     border-radius: 25px;

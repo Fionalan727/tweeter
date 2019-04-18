@@ -47,26 +47,38 @@ $(document).ready(function() {
       return $tweet;
 
     }
+
+    const tweet = $(function(){
+      var $button = $('.submit');
+      $button.on("click", function(event) {
+          event.preventDefault();
+        
+          if($('textarea').val() === ""){
+             return $( ".error1" ).slideToggle( "slow" );
+         
+          }
+          if ($('textarea').val().length > 140) {
+            return $( ".error2" ).slideToggle( "slow" );
+           
+          }
+
+          $.ajax({
+            type:'post',
+            url:'/tweets',
+            data:$('section.new-tweet form textarea').serialize(),
+            complete: function(){
+              $('textarea').val(null);
+              loadTweets();
+            }
+          });
+      });
+  }) 
+
   
 
-  function eventHandler(event){
-    event.preventDefault();
-    if($('textarea').val() === ""){
-      return alert("You didn't type anything!!")
-    }
-    if ($('textarea').val().length > 140) {
-      return alert("You have typed over character limit!!")
-    }
-    $.ajax({
-      type:'post',
-      url:'/tweets',
-      data:$('section.new-tweet form textarea').serialize(),
-      complete: function(){
-        $('textarea').val(null);
-        loadTweets();
-      }
-    });
-  }
+
+
+
   const loadTweets = function(){
     $.ajax({
       type:'get',
@@ -79,8 +91,9 @@ $(document).ready(function() {
   };
   
   loadTweets();
-  var $button = $('.submit');
-  $button.on('click', eventHandler);
+  // $( ".error" ).clear()
+
+
 
 });
  
