@@ -39,10 +39,15 @@ $(document).ready(function() {
       let $text = $("<p>").addClass("post").text(tweet.content.text);
       let $footer = $("<footer>");
       let $date = $("<p>").addClass("date").text(tweet.created_at);
+      let $iconContainer = $("<div>").addClass("icons");
+      let $flag = $("<i>").addClass("fab fa-font-awesome-flag");
+      let $retweet = $("<i>").addClass("fas fa-retweet");
+      let $heart = $("<i>").addClass("fas fa-heart");
 
+      $iconContainer.append($flag,$retweet,$heart);
       $header.append($profile, $username, $ID);
       $content.append($text);
-      $footer.append($date);
+      $footer.append($date,$iconContainer);
       $tweet.append($header, $content, $footer);
       return $tweet;
 
@@ -54,11 +59,11 @@ $(document).ready(function() {
           event.preventDefault();
         
           if($('textarea').val() === ""){
-             return $( ".error1" ).slideToggle( "slow" );
+             return $( ".error" ).slideToggle().text("no tweet has been typed");
          
           }
           if ($('textarea').val().length > 140) {
-            return $( ".error2" ).slideToggle( "slow" );
+            return $( ".error" ).slideToggle().text("over 140 character limit");
            
           }
 
@@ -69,7 +74,9 @@ $(document).ready(function() {
             complete: function(){
               $('textarea').val(null);
               loadTweets();
+              $(".error").slideToggle();
             }
+
           });
       });
   }) 
