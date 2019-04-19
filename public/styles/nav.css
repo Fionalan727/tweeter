@@ -1,10 +1,9 @@
 #nav-bar {
     position: fixed;
     top: 0;
-    height: 80px;
+    height: 87px;
     width: 100%;
-    background-color: #00a087;
-    color: #e8fdff;
+    background-color:#184E04;
     padding-left: 2em;
     padding-right: 2em;
     z-index: 1;
@@ -17,9 +16,12 @@
 }
 
 #nav-bar .header{
-    font-size: 200%;
-    padding-left: 10px;
-    line-height: 70px;
+    font-size: 32px;
+    padding-left: 13px;
+    line-height: 62px;
+    color: antiquewhite;
+    font-style: oblique;
+    font-weight: bold;
 }
 
 #nav-bar .compose{
