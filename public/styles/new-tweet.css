@@ -1,13 +1,13 @@
 .new-tweet {
     border: 1px solid lightgrey;
     border-radius: 9px;
-    width: 55%;
+    width: 61%;
     margin: 2em auto;
     background-color:#8fbd69;
     padding: 2%;
     display: none;
-    height: 294px;
     margin-top: 103px;
+    height: 353px;
 }
 
 .new-tweet h2{
@@ -74,13 +74,13 @@ footer{
     background-color: #FFBABA;
     line-height: 42px;
     padding-left: 10px;
-    height: 15%;
+    height: 13%;
 }
 
 .tweet{
     border: 2px solid #eeeeee;
     border-radius: 9px;
-    width: 55%;
+    width: 61%;
     margin: 20px auto 20px auto;
     background-color:white;
     opacity: 0.95;
@@ -132,12 +132,15 @@ textarea {
 
 
 .content{
-    min-height: 150px;
+    min-height: 177px;
     padding-top: 17px;
 }
 
 input {
-    margin-top: 5px;
+    margin-top: 10px;
+    height: 38px;
+    width: 77px;
+    font-style: 20px
 }
 
 
@@ -148,6 +151,8 @@ input {
 
 .counter{
     float: right;
+    margin-top: 17px;
+    font-size: 20px;
 }
 
 .overLimit{

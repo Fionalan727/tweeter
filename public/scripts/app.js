@@ -95,6 +95,7 @@ $(document).ready(function() {
             data:$('section.new-tweet form textarea').serialize(),
             complete: function(){
               $('textarea').val(null);
+              $('.counter').text("140")
               loadTweets();
               $(".error").slideUp();
             }

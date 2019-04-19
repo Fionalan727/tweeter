@@ -18,7 +18,7 @@
 #nav-bar .header{
     font-size: 32px;
     padding-left: 13px;
-    line-height: 62px;
+    line-height: 96px;
     color: antiquewhite;
     font-style: oblique;
     font-weight: bold;
@@ -26,5 +26,7 @@
 
 #nav-bar .compose{
     float: right;
+    font-weight: bold;
+    font-size: 20px;
     
 }
