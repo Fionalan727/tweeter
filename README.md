@@ -9,8 +9,8 @@ modifications to the back-end to handle liking tweets.
 
 
  @@ -19,15 +18,6 @@ This project uses port 8080 (<http://localhost:8080/> in your browser.).
-!["Screenshot of Tweeter home page, composed tweet box visible"](https://i.imgur.com/KYvkr3Q.png)	!["Screenshot of Tweeter home page, composed tweet box visible"](https://i.imgur.com/KYvkr3Q.png)
-!["Screenshot of Tweeter home page, composed tweet box hidden"](https://i.imgur.com/tZ0Cj7n.png)	!["Screenshot of Tweeter home page, composed tweet box hidden"](https://i.imgur.com/tZ0Cj7n.png)
+!["Screenshot of Tweeter home page, composed tweet box visible"](https://github.com/Fionalan727/tweeter/blob/master/docs/with.png)	!["Screenshot of Tweeter home page, composed tweet box visible"](https://github.com/Fionalan727/tweeter/blob/master/docs/with.png)
+!["Screenshot of Tweeter home page, composed tweet box hidden"](https://github.com/Fionalan727/tweeter/blob/master/docs/without.png)	!["Screenshot of Tweeter home page, composed tweet box hidden"](https://github.com/Fionalan727/tweeter/blob/master/docs/without.png)
 
 
  ## Dependencies	
