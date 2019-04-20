@@ -34,6 +34,7 @@ function escape(str) {
 
 $(document).ready(function() {
 
+  //add newly maded tweet into the database
   function renderTweets(tweets) {
     // loops through tweets
     $('.tweet-container').empty();
@@ -50,6 +51,7 @@ $(document).ready(function() {
     $("textarea").focus();
   });
 
+  // create textbox for tweets
   function createTweetElement (tweet) {
       const  tweetTime = timeDiff(Date.now(),tweet.created_at);
       let $tweet = $("<article>").addClass("tweet");
@@ -74,7 +76,7 @@ $(document).ready(function() {
       return $tweet;
 
     }
-
+    //tweet button behaviour
     const tweet = $(function(){
       var $button = $('.submit');
       $button.on("click", function(event) {
@@ -88,7 +90,7 @@ $(document).ready(function() {
             return $( ".error" ).slideDown().text("over 140 character limit");
            
           }
-
+          //tweet updated show tweets and reset the text area and reset the character limit
           $.ajax({
             type:'post',
             url:'/tweets',
@@ -121,7 +123,6 @@ $(document).ready(function() {
   };
   
   loadTweets();
-  // $( ".error" ).clear()
 
 
 
