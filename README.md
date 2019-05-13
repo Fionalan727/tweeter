@@ -22,7 +22,7 @@ modifications to the back-end to handle liking tweets.
 - body-parser	
 - cookie-session	
 
- ## Getting Started	## Getting Started
+ ## Getting Started	
 
 
  - Install all dependencies (using the `npm install` command).
