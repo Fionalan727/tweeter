@@ -1,4 +1,4 @@
-# Tweeter Project	# Tweeter Project
+# Tweeter Project	
 
 
  Tweeter is a simple, single-page Twitter clone.  The back-end code was provided by LHL, and forked by me.  I made some	Tweeter is a simple, single-page Twitter clone.  All the front-end code is by me.  The base back-end code was provided by LHL, and  I made some modifications to it to handle liking tweets.
